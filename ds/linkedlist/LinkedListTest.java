@@ -5,21 +5,20 @@ package ds.linkedlist;
 public class LinkedListTest {
 
     public static void main(String[] args) {
-        LinkedListt<Integer> list = new LinkedListt<>();
-        list.addFirst(1);
-        list.addFirst(233);
-        list.addFirst(35);
-        list.addFirst(823);
-        list.addFirst(92);
-        list.addFirst(3);
-        list.addFirst(13);
-        list.addFirst(983);
+      DLL<String> list = new DLL<>();
+        list.addFirst("1");
+        list.addFirst("233");
+        list.addFirst("35");
+        list.addFirst("823");
+        list.addFirst("92");
+        list.addFirst("3");
+        list.addFirst("13");
+        list.addFirst("983");
 
-        list.remove(3);
+        list.set(2,"2");
 
-        for(int i:list) {
-            System.out.println(i);
+        for(String s : list) {
+          System.out.println(s);
         }
-
     }
 }

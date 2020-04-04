@@ -2,14 +2,14 @@ package ds.stack;
 
 import java.util.Iterator;
 
-import ds.linkedlist.LinkedListt;
+import ds.linkedlist.DLL;
 
 /**
  * Doubly Linked List implementation of a Stack
  */
 public class Stack<E> implements Iterable<E> {
     // Instance variables
-    private LinkedListt<E> list = new LinkedListt<>();
+    private DLL<E> list = new DLL<>();
 
     // Constructors
 

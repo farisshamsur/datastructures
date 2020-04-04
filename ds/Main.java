@@ -1,4 +1,5 @@
 package ds;
+import java.util.Arrays;
 import java.util.LinkedList;
 /**
  * Main
@@ -16,10 +17,8 @@ public class Main {
         list.addFirst(13);
         list.addFirst(983);
 
-        list.remove(3);
-
-        for(int i:list) {
-          System.out.println(i);
+        for(int i : list) {
+            System.out.println(i);
         }
     }
 }
