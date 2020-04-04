@@ -48,7 +48,26 @@ public class Stack<E> implements Iterable<E> {
         if(isEmpty())
             throw new java.util.EmptyStackException();
         return list.getFirst();
-    } 
+    }
+    /**
+     * topmost item is considered to be at distance 1.
+     * @param o
+     * @return the 1-based position if object is in the stack, -1 otherwise
+     */
+    public int search(Object o) {
+        if (o == null) {
+            for (int i = 0; i < list.size(); i++) {
+                if (list.get(i) == null)
+                    return 1 + i;
+            }
+        } else {
+            for (int i = 0; i < list.size(); i++) {
+                if (o.equals(list.get(i)))
+                    return 1 + i;
+            }
+        }
+        return -1;
+    }
 
     @Override
     public Iterator<E> iterator() {

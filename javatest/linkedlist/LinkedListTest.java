@@ -1,4 +1,6 @@
-package ds.linkedlist;
+package javatest.linkedlist;
+
+import ds.linkedlist.*;
 /**
  * LinkedListTest
  */

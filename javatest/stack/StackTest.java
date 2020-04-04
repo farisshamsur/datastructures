@@ -1,4 +1,6 @@
-package ds.stack;
+package javatest.stack;
+
+import ds.stack.*;
 
 /**
  * StackTest
@@ -15,8 +17,9 @@ public class StackTest {
         s.push(5);
 
         s.pop();
+        s.pop();
 
-        for(int i:s) {
+        for (int i : s) {
             System.out.println(i);
         }
     }

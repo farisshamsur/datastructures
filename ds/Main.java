@@ -1,24 +1,20 @@
 package ds;
-import java.util.Arrays;
+
 import java.util.LinkedList;
+import java.util.Stack;
 /**
  * Main
  */
 public class Main {
 
     public static void main(String[] args) {
-        LinkedList<Integer> list = new LinkedList<>();
-        list.addFirst(1);
-        list.addFirst(233);
-        list.addFirst(35);
-        list.addFirst(823);
-        list.addFirst(92);
-        list.addFirst(3);
-        list.addFirst(13);
-        list.addFirst(983);
+        Stack<String> s = new Stack<>();
+        s.push("oneee");
+        s.push("twooo");
+        s.push("skreeet");
+        s.push("foooor");
+        s.push("fiverr");
 
-        for(int i : list) {
-            System.out.println(i);
-        }
+        System.out.println(s.search("fiverr"));
     }
 }

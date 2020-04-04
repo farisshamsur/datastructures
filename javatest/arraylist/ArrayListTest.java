@@ -1,4 +1,6 @@
-package ds.arraylist;
+package javatest.arraylist;
+
+import ds.arraylist.MyArrayList;
 
 public class ArrayListTest {
     public static void main(String[] args) {
