@@ -39,7 +39,7 @@ public class Stack<E> implements Iterable<E> {
     public E pop() {
         if(isEmpty())
             throw new java.util.EmptyStackException();
-        return list.remove(0);
+        return list.removeFirst();
     }
     
     // Looks at the object at the top of this stack without removing it from the stack.

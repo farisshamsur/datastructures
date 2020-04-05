@@ -15,6 +15,10 @@ public class Main {
         s.push("foooor");
         s.push("fiverr");
 
-        System.out.println(s.search("fiverr"));
+        System.out.println("top = " + s.peek());
+
+        for(String str : s) {
+            System.out.println(str);
+        }
     }
 }

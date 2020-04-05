@@ -69,6 +69,40 @@ public class DLL<E> implements Iterable<E> {
             pred.next = newNode;
         size++;
     }
+    
+    /**
+     * Unlinks the non-null first Node.
+     */
+    private E unlinkFirst(Node<E> f) {
+        final E element = f.element;
+        final Node<E> next = f.next;
+        f.next = null;
+        f.element = null;
+        first = next;
+        if (next == null)
+            last = null;
+        else 
+            next.prev = null;
+        size--;
+        return element;
+    }
+
+    /**
+     * Unlinks the non-null last Node.
+     */
+    private E unlinkLast(Node<E> l) {
+        final E element = l.element;
+        final Node<E> prev = l.prev;
+        l.element = null;
+        l.prev = null;
+        last = prev;
+        if (prev == null)
+            first = null;
+        else 
+            prev.next = null;
+        size--;
+        return element;
+    }
 
     /**
      * Unlinks non-null Node x.
@@ -219,6 +253,13 @@ public class DLL<E> implements Iterable<E> {
     }
 
     /**
+     * @return the last element
+     */
+    public E getLast() {
+        return last.element;
+    }
+
+    /**
      * @return the size of the list (number of elements)
      */
     public int size() {
@@ -265,6 +306,31 @@ public class DLL<E> implements Iterable<E> {
         }
         return false;
     }
+
+    /**
+     * Removes the first element
+     * @return the first element 
+     * @throws NoSuchElementException if list is empty
+     */
+    public E removeFirst() {
+        final Node<E> f = first;
+        if(f == null)
+            throw new NoSuchElementException();
+        return unlinkFirst(f);
+    }
+
+    /**
+     * Removes the last element
+     * @return the last element
+     * @throws NoSuchElementException if list is empty
+     */
+    public E removeLast() {
+        final Node<E> l = last;
+        if (last == null)
+            throw new NoSuchElementException();
+        return unlinkLast(l);
+    }
+
 
     /**
      * @return An array version of the linked list
