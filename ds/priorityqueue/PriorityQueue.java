@@ -91,7 +91,7 @@ public class PriorityQueue<E> {
      * This method separates the situation when there is no comparator and when the
      * comparator is give.
      * 
-     * @param k index to insert x
+     * @param k index to insert x   
      * @param x element to be inserted
      */
     private void siftUp(int k, E x) {
@@ -103,7 +103,7 @@ public class PriorityQueue<E> {
     }
 
     private static <T> void siftUpComparable(int k, T x, Object[] heap) {
-        Comparable<? super T> key = (Comparable<? super T>) x;
+        Comparable<? super T> key = (Comparable<? super T>) x; // we are telling java that x does implement the comparable interface
         while (k > 0) {
             int parent_index = (k-1) >>> 1;
             Object parent = heap[parent_index];

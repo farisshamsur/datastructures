@@ -23,9 +23,9 @@ public class PriorityqueueTest {
         pq.offer(5);
 
         
-        // while(0 < pq.size()) {
-        //     System.out.println(pq.poll());
-        // }
+        while(0 < pq.size()) {
+            System.out.println(pq.poll());
+        }
         
         // System.out.println(Arrays.toString(pq.toArray()));
 
