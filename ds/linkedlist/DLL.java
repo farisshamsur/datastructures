@@ -331,6 +331,21 @@ public class DLL<E> implements Iterable<E> {
         return unlinkLast(l);
     }
 
+    /**
+     * Removes all elements in this list.
+     * The list will be empty after this call returns.
+     */
+    public void clear() {
+        for (Node<E> x = first ; x != null; ) {
+            Node<E> next = x.next;
+            x.element = null;
+            x.prev = null;
+            x.next = null;
+            x = next;
+        }
+        first = last = null;
+        size = 0;
+    }
 
     /**
      * @return An array version of the linked list
