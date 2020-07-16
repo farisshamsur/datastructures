@@ -4,7 +4,7 @@ import ds.hashmap.*;
 
 public class HashmapTest {
     public static void main(String[] args) {
-        Hashumap<Integer, String> map = new Hashumap<>(4);
+        HashMapSC<Integer, String> map = new HashMapSC<>(4);
         map.put(1, "Naruto");
         map.put(2, "Sasuke");
         map.put(3, "Sakura");

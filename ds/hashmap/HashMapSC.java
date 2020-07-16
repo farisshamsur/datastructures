@@ -1,5 +1,7 @@
 package ds.hashmap;
-
+/**
+ * Separate Chaining implementation of the HashMap data structure.
+ */
 import java.util.Arrays;
 
 import ds.linkedlist.DLL;
@@ -33,7 +35,7 @@ class Entry<K,V> {
 }
 
 @SuppressWarnings("unchecked")
-public class Hashumap<K,V> {
+public class HashMapSC<K,V> {
 
     private static final int DEFAULT_CAPACITY = 3;
     private static final double DEFAULT_LOAD_FACTOR = 0.75;
@@ -45,18 +47,18 @@ public class Hashumap<K,V> {
 
     // CONSTRUCTORS
 
-    public Hashumap(int capacity, double maxLoadFactor) {
+    public HashMapSC(int capacity, double maxLoadFactor) {
         this.maxLoadFactor = maxLoadFactor;
         this.capacity = Math.max(DEFAULT_CAPACITY, capacity);
         threshold = (int) (capacity * maxLoadFactor);
         table = new DLL[this.capacity]; 
     }
 
-    public Hashumap(int capacity){
+    public HashMapSC(int capacity){
         this(capacity, DEFAULT_LOAD_FACTOR);
     }
 
-    public Hashumap() {
+    public HashMapSC() {
         this(DEFAULT_CAPACITY, DEFAULT_LOAD_FACTOR);
     }
 
