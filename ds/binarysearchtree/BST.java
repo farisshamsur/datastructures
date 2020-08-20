@@ -125,7 +125,7 @@ public class BST<K extends Comparable<K>, V> {
     /**
      * Successor: The next element define by the sorted inorder traversal.
      * if Node x has a right subtree, its successor is the minimum node in the right subtree.
-     * if Node x does no have a right subtree, its successor is its parent node.
+     * if Node x does not have a right subtree, its successor is its parent node.
      * if Node x is has the highest key, returns null.
      * @param x 
      * @return Successor of Node x.
